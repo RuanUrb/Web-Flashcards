@@ -1,22 +1,44 @@
-import {useState} from 'react'
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import Checkbox from '@mui/material/Checkbox';
+import IconButton from '@mui/material/IconButton';
+import CommentIcon from '@mui/icons-material/Comment';
 
+export default function Flashcard({flashcard, removeFlashcard, toggleShow, toggleSelect}) {
+    const labelId = `checkbox-list-label-${flashcard.id}`
 
-export default function Flashcard({front, back, dateIssued, daysToReview}){
-    const [showBack, setShowBack] = useState(true)
+    const isReady = (flashcard)=>{
+        return Math.floor(Date.now()/1000) > flashcard.dateIssued + flashcard.daysToReview*86400? true : false
+    }
 
-    return (
-        <div>
-            <div>
-                <h1>{front}</h1>
-                {showBack && <h2>{back}</h2>}
-                <div>
-          <select>
-            <option value="1">Review in 1 day</option>
-            <option value="3">Review in 3 days</option>
-            <option value="7">Review in 7 days</option>
-          </select>
-        </div>
-            </div>
-        </div>
-    )
+      return (
+        isReady(flashcard) &&
+        <ListItem
+          secondaryAction={
+            <IconButton edge="end" aria-label="comments" onClick={removeFlashcard}>
+              <CommentIcon />
+            </IconButton>
+          }
+          disablePadding
+        >
+        <ListItemButton
+         role={undefined}
+           dense>
+              <ListItemIcon>
+                <Checkbox
+                  edge="start"
+                  //checked={Math.floor(Date.now()/1000) > flashcard.dateIssued + flashcard.daysToReview*86400? true : false}
+                  checked={flashcard.checked}
+                  tabIndex={-1}
+                  disableRipple
+                  inputProps={{ 'aria-labelledby': labelId }}
+                  onClick={toggleSelect}
+                />
+              </ListItemIcon>
+              <ListItemText id={labelId} primary={`${flashcard.front}`} onClick={toggleShow} secondary={flashcard.isShowing && `${flashcard.back}`}/>
+            </ListItemButton>
+        </ListItem>
+      )
 }
