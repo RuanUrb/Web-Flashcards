@@ -1,0 +1,22 @@
+export const testFlashcards = [
+    {id: '7d25f6e920de48b0b29e', front: 'What is the largest planet in our solar system?', back: 'Jupiter', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '8c37a3b9f0c347e89df7', front: 'Who wrote the play "Romeo and Juliet"?', back: 'William Shakespeare', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '9e48d2c63ebf4b9682ba', front: 'What is the chemical symbol for water?', back: 'H2O', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '0a7f59e2b1994cc0a9f4', front: 'What is the process by which plants make their own food?', back: 'Photosynthesis', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '1b9436fcf04f426b8dd0', front: 'Who painted the Mona Lisa?', back: 'Leonardo da Vinci', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '2c1b8f0df02e4b78a16a', front: 'What is the currency of Japan?', back: 'Japanese Yen', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '3d6e7a532c9a4ec9ba08', front: 'What is the boiling point of water in Celsius?', back: '100 degrees Celsius', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '4e86c759fe3f4a5db3ca', front: 'Who is the author of "Harry Potter" series?', back: 'J.K. Rowling', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '5f2b13ed46344743a609', front: 'What gas do plants absorb from the atmosphere?', back: 'Carbon dioxide (CO2)', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '6g5c48a9d7214e1f3bd1', front: 'What is the tallest mountain in the world?', back: 'Mount Everest', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '7h4016d7435e4fc6a9e2', front: 'Who was the first President of the United States?', back: 'George Washington', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '8i6d5aef29c540eb9a14', front: 'What is the chemical symbol for gold?', back: 'Au', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '9j0f4e6827a847d5b3c6', front: 'What is the largest mammal in the world?', back: 'Blue whale', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '0k7g3b14a9f084c6b82e', front: 'Which gas do humans breathe out when they exhale?', back: 'Carbon dioxide (CO2)', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '1l2h6f3b90c547da8e19', front: 'What is the chemical symbol for oxygen?', back: 'O2', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '2m3i6c8f5b64a9d20e4', front: 'Who wrote the novel "Pride and Prejudice"?', back: 'Jane Austen', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '3n4j6e7a9f5d2201e8c4', front: 'What is the largest ocean on Earth?', back: 'Pacific Ocean', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '4o5k6e6c7f9e8d2b1a9', front: 'What is the capital of France?', back: 'Paris', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '5p6r6e6f7e9r8e3d4b4a', front: 'What is the chemical symbol for carbon?', back: 'C', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false},
+    {id: '6q7u8e6s7t9i8o9n4', front: 'Who discovered the theory of relativity?', back: 'Albert Einstein', dateIssued: 1693968404, daysToReview: 1, isShowing: false, checked: false}
+  ]

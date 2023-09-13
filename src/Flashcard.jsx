@@ -1,10 +1,10 @@
-import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
-import Checkbox from '@mui/material/Checkbox';
-import IconButton from '@mui/material/IconButton';
-import CommentIcon from '@mui/icons-material/Comment';
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemIcon from '@mui/material/ListItemIcon'
+import ListItemText from '@mui/material/ListItemText'
+import Checkbox from '@mui/material/Checkbox'
+import IconButton from '@mui/material/IconButton'
+import DeleteIcon from '@mui/icons-material/Delete'
 
 export default function Flashcard({flashcard, removeFlashcard, toggleShow, toggleSelect}) {
     const labelId = `checkbox-list-label-${flashcard.id}`
@@ -14,11 +14,11 @@ export default function Flashcard({flashcard, removeFlashcard, toggleShow, toggl
     }
 
       return (
-        isReady(flashcard) &&
+        //isReady(flashcard) &&
         <ListItem
           secondaryAction={
             <IconButton edge="end" aria-label="comments" onClick={removeFlashcard}>
-              <CommentIcon />
+              <DeleteIcon/>
             </IconButton>
           }
           disablePadding
@@ -29,7 +29,6 @@ export default function Flashcard({flashcard, removeFlashcard, toggleShow, toggl
               <ListItemIcon>
                 <Checkbox
                   edge="start"
-                  //checked={Math.floor(Date.now()/1000) > flashcard.dateIssued + flashcard.daysToReview*86400? true : false}
                   checked={flashcard.checked}
                   tabIndex={-1}
                   disableRipple

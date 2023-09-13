@@ -1,11 +1,9 @@
-import ListItem from "@mui/material/ListItem";
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
-import SendIcon from '@mui/icons-material/Send';
-import InputAdornment from "@mui/material/InputAdornment";
-import IconButton from "@mui/material/IconButton";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import { useState } from "react";
+import ListItem from "@mui/material/ListItem"
+import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos'
+import Alert from '@mui/material/Alert';
+import { useState } from "react"
 
 export default function Form({addFlashcard}) {
     const [front, setFront] = useState('')
@@ -29,7 +27,7 @@ export default function Form({addFlashcard}) {
             {
             !next && 
             (<>
-            <TextField required id="outlined-basic" label='Front' variant="outlined" onChange={(event)=>setFront(event.target.value)} value={front}/>
+            <TextField id="outlined-basic" label='Front' variant="outlined" onChange={(event)=>setFront(event.target.value)} value={front}/>
             <Button variant="contained" endIcon={<ArrowForwardIosIcon/>} onClick={handleNext} type='submit' >
                 Next
             </Button> 
@@ -39,14 +37,15 @@ export default function Form({addFlashcard}) {
             {
             next && 
             (<>
-            <TextField required id="outlined-basic" label='Back' variant="outlined" onChange={(event)=>setBack(event.target.value)} value={back}/>
+            <TextField id="outlined-basic" label='Back' variant="outlined" onChange={(event)=>setBack(event.target.value)} value={back}/>
             <Button variant="contained" endIcon={<ArrowForwardIosIcon/>} onClick={send} type='submit' >
-                Send
+                Add
             </Button> 
             </>)
             }
 
-        </ListItem>      
+        </ListItem>
+        {(next && front) && <Alert severity="info">Front text uploaded.</Alert>}      
         </form>
     )
 }
